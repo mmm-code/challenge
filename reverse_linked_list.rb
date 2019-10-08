@@ -11,11 +11,19 @@ class Stack
   attr_reader :data
 
   def initialize
-    @data = nil
+      @data = nil
   end
 
+  # Push a value onto the stack
   def push(value)
-    @data = LinkedListNode.new(value, @data)
+      # IMPLEMENT ME!
+  end
+
+  # Pop an item off the stack.
+  # Remove the last item that was pushed onto the
+  # stack and return the value to the user
+  def pop
+      # I RETURN A VALUE
   end
 end
   
@@ -34,16 +42,26 @@ node2 = LinkedListNode.new(99, node1)
 node3 = LinkedListNode.new(12, node2)
 
 def reverse_list(list)
-  stack = Stack.new
+  # ADD CODE HERE
+	current = @value
+	previous = nil
 
-  while list
-    stack.push(list.value)
-    
-    list = list.next_node
+	while current !=nil
+		next_node = current.next
+		current.next = previous
+		previous = current
+		current = next_node
+	end
+	@value = previous
   end
 
-  return stack.data
-end
+  #while list
+      # ADD CODE HERE
+   #   list = list.next_node
+  # end
+
+    # ADD CODE HERE
+  # end
 
 print_values(node3)
 

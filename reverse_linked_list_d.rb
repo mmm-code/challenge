@@ -8,14 +8,24 @@ class LinkedListNode
 end
 
 class Stack
-  attr_reader :data
+  attr_reader :previous_node
 
   def initialize
-    @data = nil
+      @previous_node = nil
   end
 
+  # Push a value onto the stack
   def push(value)
-    @data = LinkedListNode.new(value, @data)
+      # IMPLEMENT ME!
+	 print "node1"
+  end
+
+  # Pop an item off the stack.
+  # Remove the last item that was pushed onto the
+  # stack and return the value to the user
+  def pop
+      # I RETURN A VALUE
+    print "nil"
   end
 end
   
@@ -33,16 +43,16 @@ node1 = LinkedListNode.new(37)
 node2 = LinkedListNode.new(99, node1)
 node3 = LinkedListNode.new(12, node2)
 
-def reverse_list(list)
-  stack = Stack.new
 
+def reverse_list(list)
+  # ADD CODE HERE
+  print Stack
   while list
-    stack.push(list.value)
-    
-    list = list.next_node
+      # ADD CODE HERE
+      list = list.next_node
   end
 
-  return stack.data
+    # ADD CODE HERE
 end
 
 print_values(node3)
