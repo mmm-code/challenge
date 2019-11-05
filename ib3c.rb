@@ -15,7 +15,7 @@ class Image
 	end
 
 	def blur(distance)
-
+    #3.times do
 		distance.times do
 			num = get_num
 			@image.each_with_index do |row, i|
@@ -32,6 +32,7 @@ class Image
 	end
 
 	def get_num
+    #[[4,3], [#,#], [#,#], [#,#], [#,#], [4,3], [#,#], [#,#], [#,#], [#,#]]
 		num = []
 		@image.each_with_index do |row, i|
 			row.each_with_index do |cell, j|
@@ -50,7 +51,7 @@ image = Image.new([
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 1, 0, 0, 0, 0, 0],
+	[0, 0, 1, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
